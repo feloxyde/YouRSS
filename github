@@ -1,0 +1,7 @@
+//git init
+//git remote add origin /adresse
+git add *  //des la creation d'un fichier
+git commit -m "unmessage" //modification d'un fichier
+git pull origin master //recup des modifications
+git push origin master //envoie des modifications
+
