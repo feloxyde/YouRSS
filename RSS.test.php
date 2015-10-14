@@ -5,6 +5,7 @@
       //Test de la class Nouvelle
     //  require_once('model/Nouvelle.class.php');
 
+<<<<<<< HEAD
 
       // Une instance de RSS
       $rss = new RSS('http://www.lemonde.fr/m-actu/rss_full.xml');
@@ -14,6 +15,13 @@
 /*
       // Affiche le titre
       echo $rss->titre()."\n";
+=======
+      // Charge le flux depuis le réseau
+      $rss->update();
+
+      // Affiche le titre
+      echo $rss->titre()."\n";// Test de la classe RSS
+>>>>>>> f605dbf86f4cca4b4e17f43151f1e05f926ad5e2
 
       echo $rss->date()."\n";
 
