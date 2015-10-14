@@ -7,8 +7,8 @@ class RSS {
         private $nouvelles; // Liste des nouvelles du flux
 
         // Contructeur
-        function __construct($url) {
-          $this->url = $url;
+        function __construct($anurl) {
+          $this->url = $anurl;
         }
 
         // Fonctions getter
@@ -28,17 +28,12 @@ class RSS {
       function update() {
         // Cree un objet pour accueillir le contenu du RSS : un document XML
         $doc = new DOMDocument;
-
         //Telecharge le fichier XML dans $rss
-        $doc->load($this->URL);
-
+        $doc->load($this->url);
         // Recupère la liste (DOMNodeList) de tous les elements de l'arbre 'title'
         $nodeList = $doc->getElementsByTagName('title');
-
         // Met à jour le titre dans l'objet
         $this->titre = $nodeList->item(0)->textContent;
-
-
       }
     }
 
