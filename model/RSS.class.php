@@ -30,13 +30,21 @@ class RSS {
         $doc = new DOMDocument;
 
         //Telecharge le fichier XML dans $rss
-        $doc->load($this->URL);
+        $doc->load($this->url);
 
         // Recupère la liste (DOMNodeList) de tous les elements de l'arbre 'title'
         $nodeList = $doc->getElementsByTagName('title');
 
         // Met à jour le titre dans l'objet
         $this->titre = $nodeList->item(0)->textContent;
+
+        //Met à jour la date dans l'objet
+        $this->url = $nodeList->item(1)->textContent;
+
+        //met à jour la date dans l'objet
+      //  $this->date = nodeList->item(2)->textContent;
+
+
 
 
       }
